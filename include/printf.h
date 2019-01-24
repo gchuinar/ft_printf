@@ -6,7 +6,7 @@
 /*   By: gchuinar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/02 21:04:44 by gchuinar          #+#    #+#             */
-/*   Updated: 2019/01/23 02:01:38 by gchuinar         ###   ########.fr       */
+/*   Updated: 2019/01/24 05:19:38 by gchuinar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ void	ft_display_h(const char *str, va_list param, int i, int h);
 
 void	ft_putfloat_hexa(double nbr, int i, char c);
 char	*ft_convert_u(int nbr, char c);
-void	ft_putscient(double nbr, int i, char c);
 char	*ft_uitoa(unsigned long long n);
 void	ft_putlonglong(long long nbr);
+void	ft_putlong(long nbr);
 void	ft_uputlonglong(unsigned long long nbr);
 void	ft_uputnbr(unsigned int nbr);
 char	*ft_double_to_ull(double nbr, int count, char *str);
@@ -37,6 +37,10 @@ char	*ft_do_add(char *nb1, char *nb2, char *result);
 char	*ft_do_mult(char *nb1, char *nb2, char *result);
 void	ft_fill_zero(void *s, size_t n);
 void	ft_fill_A(void *s, size_t n);
+char	*ft_decal_0(char *str);
+char	*ft_decal_A(char *str);
+char	*ft_swap_mult(char *str);
+int		ft_mult_is_neg(char *nb1, char *nb2);
 
 size_t	ft_strlen(const char *str);
 char	*ft_strchr(const char *str, int c);
@@ -52,7 +56,6 @@ void	ft_putstr(char *str);
 void	ft_putendl(char *str);
 
 void	ft_putnbr(int nbr);
-void	ft_putfloat(double nbr, int i);
 
 int		ft_check_base(const char *base);
 int		ft_check_nbr(char *nbr, const char *base);

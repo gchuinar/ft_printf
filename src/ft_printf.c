@@ -6,12 +6,12 @@
 /*   By: gchuinar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/14 18:44:33 by gchuinar          #+#    #+#             */
-/*   Updated: 2019/01/17 06:56:57 by gchuinar         ###   ########.fr       */
+/*   Updated: 2019/01/24 02:52:14 by gchuinar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include "printf.h"
+#include "../include/printf.h"
 #include <stdlib.h>
 
 static int	ft_check_printf_option(char c)
@@ -94,12 +94,10 @@ static int	ft_printf(const char *str, ...)
 			}
 			else if (str[i + 1] == 'f')
 			{
-				ft_putfloat(va_arg(param, double), 2);
 				i += 2;
 			}
 			else if (str[i + 1] == 'e' || str[i + 1] == 'E')
 			{
-				ft_putscient(va_arg(param, double), 6, str[i + 1]);
 				i += 2;
 			}
 			else if (str[i + 1] == 'o')

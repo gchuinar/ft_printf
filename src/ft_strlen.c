@@ -6,7 +6,7 @@
 /*   By: gchuinar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 07:25:40 by gchuinar          #+#    #+#             */
-/*   Updated: 2019/01/14 20:39:18 by gchuinar         ###   ########.fr       */
+/*   Updated: 2019/01/24 03:26:12 by gchuinar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,13 @@ size_t	ft_strlen(const char *s)
 	size_t	size;
 
 	size = 0;
-	while (*s)
+	if (s)
 	{
-		s++;
-		size++;
+		while (*s)
+		{
+			s++;
+			size++;
+		}
 	}
 	return (size);
 }

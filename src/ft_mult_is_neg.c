@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_mult_is_neg.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gchuinar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/07 07:25:29 by gchuinar          #+#    #+#             */
-/*   Updated: 2019/01/24 03:39:45 by gchuinar         ###   ########.fr       */
+/*   Created: 2019/01/24 05:13:07 by gchuinar          #+#    #+#             */
+/*   Updated: 2019/01/24 05:21:54 by gchuinar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include "../include/printf.h"
-
-char	*ft_strdup(const char *str)
+int	ft_mult_is_neg(char *nb1, char *nb2)
 {
-	int		i;
-	char	*dest;
+	int	i;
+	int	j;
 
 	i = 0;
-	dest = NULL;
-	if ((dest = (char*)malloc(sizeof(char) * ft_strlen(str) + 1)))
-	{
-		while (str[i] != '\0')
-		{
-			dest[i] = str[i];
-			i++;
-		}
-		dest[i] = '\0';
-	}
-	return (dest);
+	j = 0;
+	while ((((nb1[i] > 8 && nb1[i] < 14) || nb1[i] == ' ')))
+		i++;
+	while ((((nb2[j] > 8 && nb2[j] < 14) || nb2[j] == ' ')))
+		j++;
+	if (nb1[i] == '-' && nb2[j] == '-')
+		return (0);
+	else if (nb1[i] == '-' || nb2[j] == '-')
+		return (1);
+	return (0);
 }

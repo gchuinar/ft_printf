@@ -6,7 +6,7 @@
 /*   By: gchuinar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/17 21:48:54 by gchuinar          #+#    #+#             */
-/*   Updated: 2019/01/21 05:00:24 by gchuinar         ###   ########.fr       */
+/*   Updated: 2019/01/24 03:57:45 by gchuinar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_conv_b_d(char *str)
 	unsigned long long	result;
 	int	i;
 	size_t	len;
-	int		power;
+//	int		power;
 
 	i = 0;
 	result = 1;

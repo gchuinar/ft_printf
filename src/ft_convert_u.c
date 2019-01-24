@@ -6,7 +6,7 @@
 /*   By: gchuinar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/10 17:49:04 by gchuinar          #+#    #+#             */
-/*   Updated: 2019/01/17 21:48:18 by gchuinar         ###   ########.fr       */
+/*   Updated: 2019/01/24 02:30:53 by gchuinar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,10 @@ char	*ft_convert_u(int nbr, char c)
 		return (ft_convert_base(ft_uitoa(nb), "0123456789abcdef", "0123456789"));
 	else if (c == 'a')
 	{
-		ft_putstr("0x");
 		return (ft_convert_base(ft_uitoa(nb), "0123456789abcdef", "0123456789"));
 	}
 	else if (c == 'A')
 	{
-		ft_putstr("0X");
 		return (ft_convert_base(ft_uitoa(nb), "0123456789ABCDEF", "0123456789"));
 	}
 	else if (c == 'b')

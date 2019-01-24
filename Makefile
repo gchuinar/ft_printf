@@ -6,7 +6,7 @@
 #    By: gchuinar <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/14 17:24:37 by gchuinar          #+#    #+#              #
-#    Updated: 2019/01/23 01:54:41 by gchuinar         ###   ########.fr        #
+#    Updated: 2019/01/24 05:14:10 by gchuinar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,10 +18,13 @@ SRC_NAME = ft_atoi_ull.c	\
 	ft_strdup.c	\
 	ft_convert_base.c	\
 	ft_strcat.c	\
+	ft_mult_is_neg.c	\
 	ft_fill_zero.c	\
 	ft_do_add.c	\
 	ft_sizecmp.c	\
+	ft_swap_mult.c	\
 	ft_convert_u.c	\
+	ft_decal.c	\
 	ft_power_dbl.c	\
 	ft_do_mult.c	\
 	ft_display_a_A.c	\
@@ -37,12 +40,10 @@ SRC_NAME = ft_atoi_ull.c	\
 	ft_printf.c	\
 	ft_putchar.c	\
 	ft_putendl.c	\
-	ft_putfloat.c	\
 	ft_putfloat_hexa.c	\
 	ft_putlong.c	\
 	ft_putlonglong.c	\
 	ft_putnbr.c	\
-	ft_putscient.c	\
 	ft_strchr.c	\
 	ft_strlen.c	\
 	ft_strnew.c	\
@@ -57,9 +58,9 @@ LIBFT = libft/libft.a
 
 NAME = a.out
 
-CC = clang
+CC = gcc
 
-CFLAGS =  
+CFLAGS =  -fsanitize=address -g
 
 OBJ_NAME = $(SRC_NAME:.c=.o)
 
@@ -70,7 +71,7 @@ OBJ = $(addprefix $(OBJ_PATH)/,$(OBJ_NAME))
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(LIBFT) $^ -o $@
+	$(CC) -o $@ $^
 
 $(OBJ_PATH)/%.o: $(SRC_PATH)/%.c
 	$(CC) $(CFLAGS) $(CPPFLAGS) -o $@ -c $<

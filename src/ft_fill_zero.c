@@ -6,16 +6,17 @@
 /*   By: gchuinar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/22 23:31:19 by gchuinar          #+#    #+#             */
-/*   Updated: 2019/01/23 02:03:47 by gchuinar         ###   ########.fr       */
+/*   Updated: 2019/01/24 04:54:32 by gchuinar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/printf.h"
+#include	<stdio.h>
 
 void	ft_fill_A(void *s, size_t n)
 {
 	unsigned char	*ptr;
-	size_t			i;
+	unsigned int	i;
 
 	ptr = (unsigned char*)s;
 	i = 0;
