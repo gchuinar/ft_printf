@@ -6,7 +6,7 @@
 /*   By: gchuinar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/17 01:34:53 by gchuinar          #+#    #+#             */
-/*   Updated: 2019/01/24 05:10:32 by gchuinar         ###   ########.fr       */
+/*   Updated: 2019/01/24 21:28:26 by gchuinar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,10 @@
 char	*ft_doop_str(char *nb1, char c, char *nb2)
 {
 	char	*result;
-
+	
 	result = NULL;
 	if (c == '*')
+		
 		result = ft_do_mult(nb1, nb2, result);
 	/*	else if (c == '/')
 			result = ft_do_div(nb1, nb2, result);*/

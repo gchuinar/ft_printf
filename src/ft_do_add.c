@@ -6,7 +6,7 @@
 /*   By: gchuinar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/21 04:57:12 by gchuinar          #+#    #+#             */
-/*   Updated: 2019/01/24 01:56:53 by gchuinar         ###   ########.fr       */
+/*   Updated: 2019/01/25 00:13:25 by gchuinar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,17 +61,11 @@ static char *ft_add_chiffre(char nb1, char nb2)
 }
 static char *ft_add_wmal(char *nb1, char *nb2)
 {
-	int     n1;
-	int     n2;
-	int     ret;
-	int     nbr;
 	char    *result;
 
 	result = ft_strdup(ft_add_womal(&nb1[1], &nb2[1]));
 	if (ft_strlen(result) == ft_strlen(&nb1[1]))
-	{
 		result = ft_strjoin(ft_add_chiffre(nb1[0], nb2[0]), result);
-	}
 	else
 		result = ft_strjoin(ft_add_chiffre(nb1[0], nb2[0]), result);
 	return (result);

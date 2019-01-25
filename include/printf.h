@@ -6,7 +6,7 @@
 /*   By: gchuinar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/02 21:04:44 by gchuinar          #+#    #+#             */
-/*   Updated: 2019/01/24 05:19:38 by gchuinar         ###   ########.fr       */
+/*   Updated: 2019/01/25 02:24:52 by gchuinar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <stdlib.h>
 
 void	ft_display_l(const char *str, va_list param, int i, int l);
-void	ft_display_a_A(const char *str, va_list param, int i, int s);
+void	ft_display_a_A(const char *str, va_list param, int i);
 void	ft_display_h(const char *str, va_list param, int i, int h);
 
 void	ft_putfloat_hexa(double nbr, int i, char c);
@@ -27,7 +27,6 @@ void	ft_putlonglong(long long nbr);
 void	ft_putlong(long nbr);
 void	ft_uputlonglong(unsigned long long nbr);
 void	ft_uputnbr(unsigned int nbr);
-char	*ft_double_to_ull(double nbr, int count, char *str);
 unsigned long long	ft_atoi_ull(const char *str);
 double	ft_power_dbl(unsigned long long nbr, int power);
 char	*ft_conv_b_d(char *str);
@@ -40,7 +39,9 @@ void	ft_fill_A(void *s, size_t n);
 char	*ft_decal_0(char *str);
 char	*ft_decal_A(char *str);
 char	*ft_swap_mult(char *str);
-int		ft_mult_is_neg(char *nb1, char *nb2);
+int		ft_mult_is_neg(char **nb1, char **nb2);
+void	ft_add_bin(void *nbr);
+char	*ft_bitoa(double *n);
 
 size_t	ft_strlen(const char *str);
 char	*ft_strchr(const char *str, int c);
@@ -56,6 +57,8 @@ void	ft_putstr(char *str);
 void	ft_putendl(char *str);
 
 void	ft_putnbr(int nbr);
+
+void    print_memory(const void *addr, size_t size);
 
 int		ft_check_base(const char *base);
 int		ft_check_nbr(char *nbr, const char *base);

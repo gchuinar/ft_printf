@@ -6,7 +6,7 @@
 #    By: gchuinar <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/14 17:24:37 by gchuinar          #+#    #+#              #
-#    Updated: 2019/01/24 05:14:10 by gchuinar         ###   ########.fr        #
+#    Updated: 2019/01/25 02:21:47 by gchuinar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,11 +21,14 @@ SRC_NAME = ft_atoi_ull.c	\
 	ft_mult_is_neg.c	\
 	ft_fill_zero.c	\
 	ft_do_add.c	\
+	ft_add_bin.c	\
 	ft_sizecmp.c	\
+	ft_printmem.c	\
 	ft_swap_mult.c	\
 	ft_convert_u.c	\
 	ft_decal.c	\
 	ft_power_dbl.c	\
+	ft_bitoa.c	\
 	ft_do_mult.c	\
 	ft_display_a_A.c	\
 	ft_display_h.c	\
@@ -54,13 +57,11 @@ OBJ_PATH = obj
 
 CPPFLAGS = -Iinclude
 
-LIBFT = libft/libft.a
-
 NAME = a.out
 
 CC = gcc
 
-CFLAGS =  -fsanitize=address -g
+CFLAGS = 
 
 OBJ_NAME = $(SRC_NAME:.c=.o)
 

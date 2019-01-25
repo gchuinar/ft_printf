@@ -6,7 +6,7 @@
 /*   By: gchuinar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/14 18:44:33 by gchuinar          #+#    #+#             */
-/*   Updated: 2019/01/24 02:52:14 by gchuinar         ###   ########.fr       */
+/*   Updated: 2019/01/25 05:09:56 by gchuinar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ static int	ft_printf(const char *str, ...)
 			}
 			else if (str[i + 1] == 'a' || str[i + 1] == 'A')
 			{
-				ft_display_a_A(str, param, i, 6);
+				ft_display_a_A(str, param, i);
 				i += 2;
 			}
 			else if (str[i + 1] == 'd'|| str[i +1] == 'i')
@@ -94,6 +94,7 @@ static int	ft_printf(const char *str, ...)
 			}
 			else if (str[i + 1] == 'f')
 			{
+	//			ft_add_bin(va_arg(param, double));
 				i += 2;
 			}
 			else if (str[i + 1] == 'e' || str[i + 1] == 'E')
@@ -153,26 +154,15 @@ static int	ft_printf(const char *str, ...)
 
 	return (0);
 }
-/*
+
 int     main(void)
 {
-	char    str1[] = "coucou";
-	char    str2[] = "les";
-	char    str3[] = "loulou";
-	float	a = -123.456;
-	float	b = 99999999999999999999999.12345678911;
-	float	m = 12345678911131517192123.12345678911;
-
-	long	c = 327668457;
-	char	C = 65;
-	short	x = 12345;
-	int		d = 5;
+	float	d = 5.2;
 	int		g = 0;
 
-//	9154391252037992972288
-//	9223372036854775807
-
-	printf("[Printf] =    %.2f \n", b);
-	ft_printf("[ft_printf] = %f \n", b);
+//	printf("[Printf] =    %X \n", &d);
+//	ft_printf("[ft_printf] = %f \n", &d);
+	print_memory(&d, 4);
+	ft_add_bin(&d);
 	return (0);
-}*/
+}

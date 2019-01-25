@@ -6,7 +6,7 @@
 /*   By: gchuinar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/22 20:10:55 by gchuinar          #+#    #+#             */
-/*   Updated: 2019/01/24 05:21:48 by gchuinar         ###   ########.fr       */
+/*   Updated: 2019/01/25 00:20:38 by gchuinar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,24 +79,15 @@ static char	*ft_mult(char *nb1, char *nb2)
 
 char	*ft_do_mult(char *nb1, char *nb2, char *result)
 {
+	int	neg;
+	neg = ft_mult_is_neg((&nb1), (&nb2));
 	if (ft_sizecmp(nb1, nb2) == 1)
 		result = ft_mult(nb1, nb2);
 	else if (ft_sizecmp(nb1, nb2) == 2)
 		result = ft_mult(nb2, nb1);
 	else if (ft_sizecmp(nb1, nb2) == 0)
 		result = ft_mult(nb1, nb2);
-	if (ft_mult_is_neg(nb1, nb2) == 1)
+	if (neg == 1)
 		result = ft_strjoin("-", result);
 	return (result);
-}
-
-int	main(void)
-{
-	char *a;
-	char *b;
-
-	a = ft_strdup("0");
-	b = ft_strjoin("12", "9");
-	ft_putendl(ft_doop_str(a, '*', b));
-	return (0);
 }

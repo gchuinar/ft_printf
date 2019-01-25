@@ -6,24 +6,38 @@
 /*   By: gchuinar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/24 05:13:07 by gchuinar          #+#    #+#             */
-/*   Updated: 2019/01/24 05:21:54 by gchuinar         ###   ########.fr       */
+/*   Updated: 2019/01/25 00:35:45 by gchuinar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_mult_is_neg(char *nb1, char *nb2)
+int	ft_mult_is_neg(char **nb1, char **nb2)
 {
 	int	i;
 	int	j;
 
 	i = 0;
 	j = 0;
-	while ((((nb1[i] > 8 && nb1[i] < 14) || nb1[i] == ' ')))
-		i++;
-	while ((((nb2[j] > 8 && nb2[j] < 14) || nb2[j] == ' ')))
-		j++;
-	if (nb1[i] == '-' && nb2[j] == '-')
+	while ((((**nb1 > 8 && **nb1 < 14) || **nb1 == ' ')))
+	{
+		(*nb1)++;
+	}
+	while ((((**nb2 > 8 && **nb2 < 14) || **nb2 == ' ')))
+		(*nb2)++;
+	if (**nb1 == '-' && **nb2 == '-')
+	{
+		(*nb1)++;
+		(*nb2)++;
 		return (0);
-	else if (nb1[i] == '-' || nb2[j] == '-')
+	}
+	else if (**nb1 == '-')
+	{
+		(*nb1)++;
 		return (1);
+	}
+	else if (**nb2 == '-')
+	{
+		(*nb2)++;
+		return (1);
+	}
 	return (0);
 }

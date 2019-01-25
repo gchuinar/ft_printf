@@ -6,7 +6,7 @@
 /*   By: gchuinar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/03 05:22:37 by gchuinar          #+#    #+#             */
-/*   Updated: 2019/01/17 21:56:42 by gchuinar         ###   ########.fr       */
+/*   Updated: 2019/01/25 00:02:53 by gchuinar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,13 +48,13 @@ static char	*ft_deci_base(unsigned int nbr, const char *base, size_t len)
 	n = nbr;
 	size = 0;
 	i = 0;
-	while ((n >= (int)len))
+	while ((n >= len))
 	{
 		size++;
-		n /= (int)len;
+		n /= len;
 	}
 	nb = ft_strnew(size + 1);
-	while (nbr >= (int)len)
+	while (nbr >= len)
 	{
 		nb[i] = base[nbr % len];
 		nbr /= len;

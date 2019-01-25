@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_uitoa.c                                         :+:      :+:    :+:   */
+/*   ft_bitoa.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gchuinar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/10 15:19:45 by gchuinar          #+#    #+#             */
-/*   Updated: 2019/01/25 02:21:58 by gchuinar         ###   ########.fr       */
+/*   Created: 2019/01/25 00:57:21 by gchuinar          #+#    #+#             */
+/*   Updated: 2019/01/25 02:22:56 by gchuinar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include "../include/printf.h"
 #include <stdio.h>
 
-static int	ft_intlen(unsigned long long nbr)
+static int	ft_doublelen(double *nbr)
 {
 	int len;
 
@@ -24,29 +24,27 @@ static int	ft_intlen(unsigned long long nbr)
 		return (1);
 	while (nbr != 0)
 	{
-		nbr = nbr / 10;
+		nbr = (unsigned long long)nbr / 10;
 		len++;
 	}
 	return (len);
 }
 
-char		*ft_uitoa(unsigned long long n)
+char		*ft_bitoa(double *n)
 {
 	int				len;
 	char			*alpha;
 
 	alpha = NULL;
-	len = ft_intlen(n);
+	len = ft_doublelen(n);
 	if (!(alpha = (char *)malloc(sizeof(char) * len + 1)))
 		return (NULL);
 	alpha[len--] = '\0';
 	while (len >= 0)
 	{
-		alpha[len] = (n % 10) + '0';
-		n = n / 10;
+		alpha[len] = ((unsigned long long)n % 10) + '0';
+		n = (unsigned long long)n / 10;
 		len--;
 	}
-	ft_putstr("alpha = ");
-	ft_putendl(alpha);
 	return (alpha);
 }

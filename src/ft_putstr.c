@@ -1,25 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_mantisse.c                                      :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gchuinar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/14 22:15:31 by gchuinar          #+#    #+#             */
-/*   Updated: 2019/01/14 22:23:58 by gchuinar         ###   ########.fr       */
+/*   Created: 2018/11/07 10:30:03 by gchuinar          #+#    #+#             */
+/*   Updated: 2019/01/25 00:21:37 by gchuinar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/printf.h"
 
-char	*ft_mantisse(char *nbr)
+void	ft_putstr(char *str)
 {
-	char	*nb;
-
-	nb = NULL;
-	if ((nb = (char*)malloc(sizeof(char) * 24)))
-	{
-		
-	}
-	return (nb);
+	if (!str)
+		return ;
+	while (*str)
+		ft_putchar(*str++);
 }

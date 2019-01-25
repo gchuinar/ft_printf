@@ -1,68 +1,70 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putfloat.c                                      :+:      :+:    :+:   */
+/*   ft_printmem.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gchuinar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/13 20:23:39 by gchuinar          #+#    #+#             */
-/*   Updated: 2019/01/24 02:53:13 by gchuinar         ###   ########.fr       */
+/*   Created: 2019/01/25 01:45:14 by gchuinar          #+#    #+#             */
+/*   Updated: 2019/01/25 05:10:08 by gchuinar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/printf.h"
 #include <unistd.h>
+#include "../include/printf.h"
 
-static void	ft_putnbr_hex(int octet, int rem)
+static char	ft_putnbr_hex(int octet, int rem)
 {
-	char const *base = "0123456789abcdef";
+	char *base = "0123456789abcdef";
 
 	if (rem > 1)
 		ft_putnbr_hex(octet >> 4, rem - 1);
-	write(1, base + (octet % 16), 1);
+	return (base[octet % 16]);
 }
 
-static void	sp_putchar(unsigned char const *ptr)
+static char	sp_putchar(unsigned char const *ptr)
 {
 	char const c = *ptr;
 
 	if (' ' <= c && c <= '~')
-		write(1, ptr, 1);
+		return (*ptr);
 	else
 		write(1, ".", 1);
 }
 
-static void	ft_print_memory(const void *addr, size_t size)
+void	print_memory(const void *addr, size_t size)
 {
 	size_t i;
 	size_t a;
 	unsigned char const *ptr = addr;
+	char	*str;
+	int		k;
 
+	str = ft_strnew(32);
+	k = 0;
 	i = 0;
 	while (i < size)
 	{
 		a = 0;
 		while (a < 16 && a + i < size)
 		{
-			ft_putnbr_hex(*(ptr + i + a), 2);
-			if (a % 2)
-				write(1, " ", 1);
+			str[k] = ft_putnbr_hex(*(ptr + i + a), 2);
 			a++;
+			k++;
 		}
 		while (a < 16)
-		{
-			write(1, "  ", 2);
-			if (a % 2)
-				write(1, " ", 1);
 			a++;
-		}
 		a = 0;
 		while (a < 16 && a + i < size)
 		{
-			sp_putchar(ptr + a + i);
+			str[k] = sp_putchar(ptr + a + i);
 			a++;
+			k++;
 		}
 		write(1, "\n", 1);
 		i += 16;
 	}
+	ft_putstr("str = ");
+	ft_putendl(str);
+	write(1, "\n", 1);
 }
