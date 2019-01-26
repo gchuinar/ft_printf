@@ -6,7 +6,7 @@
 /*   By: gchuinar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/14 18:44:33 by gchuinar          #+#    #+#             */
-/*   Updated: 2019/01/26 06:13:17 by gchuinar         ###   ########.fr       */
+/*   Updated: 2019/01/27 00:05:50 by gchuinar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -163,7 +163,7 @@ int     main(void)
 //	printf("[Printf] =    %X \n", &d);
 //	ft_printf("[ft_printf] = %f \n", &d);
 	mem = ft_strndup(ft_get_memory(&d, 4), 8);
-	ft_doop_str("15", '+', "9");
+	ft_doop_str("196", '+', "115");
 	ft_add_bin(mem);
 	return (0);
 }
