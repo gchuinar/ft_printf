@@ -6,7 +6,7 @@
 #    By: gchuinar <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/14 17:24:37 by gchuinar          #+#    #+#              #
-#    Updated: 2019/01/25 02:21:47 by gchuinar         ###   ########.fr        #
+#    Updated: 2019/01/26 04:10:48 by gchuinar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,7 @@ SRC_PATH = src
 SRC_NAME = ft_atoi_ull.c	\
 	ft_check_base.c	\
 	ft_check_nbr.c	\
+	ft_strndup.c	\
 	ft_strdup.c	\
 	ft_convert_base.c	\
 	ft_strcat.c	\
@@ -23,7 +24,7 @@ SRC_NAME = ft_atoi_ull.c	\
 	ft_do_add.c	\
 	ft_add_bin.c	\
 	ft_sizecmp.c	\
-	ft_printmem.c	\
+	ft_get_mem.c	\
 	ft_swap_mult.c	\
 	ft_convert_u.c	\
 	ft_decal.c	\

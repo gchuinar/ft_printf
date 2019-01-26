@@ -6,7 +6,7 @@
 /*   By: gchuinar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/02 21:04:44 by gchuinar          #+#    #+#             */
-/*   Updated: 2019/01/25 02:24:52 by gchuinar         ###   ########.fr       */
+/*   Updated: 2019/01/26 04:11:32 by gchuinar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char	*ft_decal_0(char *str);
 char	*ft_decal_A(char *str);
 char	*ft_swap_mult(char *str);
 int		ft_mult_is_neg(char **nb1, char **nb2);
-void	ft_add_bin(void *nbr);
+void	ft_add_bin(char *nbr);
 char	*ft_bitoa(double *n);
 
 size_t	ft_strlen(const char *str);
@@ -51,6 +51,7 @@ char    *ft_strnew(size_t size);
 void    *ft_memset(void *s, int c, size_t n);
 char	*ft_strcat(char *dest, const char *src);
 char	*ft_strdup(const char *str);
+char	*ft_strndup(const char *str, size_t len);
 
 void	ft_putchar(char c);
 void	ft_putstr(char *str);
@@ -58,7 +59,7 @@ void	ft_putendl(char *str);
 
 void	ft_putnbr(int nbr);
 
-void    print_memory(const void *addr, size_t size);
+char	*ft_get_memory(const void *addr, size_t size);
 
 int		ft_check_base(const char *base);
 int		ft_check_nbr(char *nbr, const char *base);

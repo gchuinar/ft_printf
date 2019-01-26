@@ -6,7 +6,7 @@
 /*   By: gchuinar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/21 04:57:12 by gchuinar          #+#    #+#             */
-/*   Updated: 2019/01/25 00:13:25 by gchuinar         ###   ########.fr       */
+/*   Updated: 2019/01/26 06:13:02 by gchuinar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,5 +94,6 @@ char    *ft_do_add(char *nb1, char *nb2, char *result)
 		else
 			result = ft_add_wmal(nb1, nb2);
 	}
+	printf("result = %s\n", result);
 	return (result);
 }
