@@ -6,7 +6,7 @@
 /*   By: gchuinar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/02 21:04:44 by gchuinar          #+#    #+#             */
-/*   Updated: 2019/01/26 04:11:32 by gchuinar         ###   ########.fr       */
+/*   Updated: 2019/01/27 20:28:44 by gchuinar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ char	*ft_swap_mult(char *str);
 int		ft_mult_is_neg(char **nb1, char **nb2);
 void	ft_add_bin(char *nbr);
 char	*ft_bitoa(double *n);
+char	*ft_addsamelen(char *nb1, char *nb2);
 
 size_t	ft_strlen(const char *str);
 char	*ft_strchr(const char *str, int c);

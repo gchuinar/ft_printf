@@ -6,7 +6,7 @@
 /*   By: gchuinar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/25 00:27:01 by gchuinar          #+#    #+#             */
-/*   Updated: 2019/01/26 23:46:44 by gchuinar         ###   ########.fr       */
+/*   Updated: 2019/01/27 23:27:22 by gchuinar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,22 +88,26 @@ static void	ft_exp(char *str)
 		if (str[len] == '1')
 		{
 			i = size - len;
-//			printf("i = %d\n", i);
+			printf("i = %d\n", i);
 			if (i > 1)
 			{
+				printf("nbr avant if i > 0 = %s\n", nbr);
 				nb = ft_strdup(nbr);
 				nbr = ft_strdup("1");
+				printf("nb if i > 0 = %s\n", nb);
+				printf("nbr 1 = %s\n", nbr);
 			}
 			while (i > 1)
 			{
+				printf("nbr while = %s\n", nbr);
 				nbr = ft_strdup(ft_doop_str(nbr, '*', "2"));
 				i--;
-		//		printf("nbr while = %s\n", nbr);
 			}
-		//		printf("nbr = %s\n", nbr);
+				printf("nbr = %s\n", nbr);
 			if (len != (size - 1))
 			{
-				printf("nb s - 1 = %s\n", nb);
+				printf("nb add = %s\n", nb);
+				printf("nbr add = %s\n", nbr);
 				nbr = ft_doop_str(nbr, '+', nb);
 				printf("nbr s - 1 = %s\n", nbr);
 				free(nb);
@@ -138,6 +142,6 @@ void	ft_add_bin(char *nbr)
 	len -= 16;
 	tab[1][i] = bin[len];
 	tab[2] = ft_fill_mantisse(tab[2], bin);
-	tab[1] = "11111111";
-//	ft_exp(tab[1]);
+	tab[1] = "00100011";
+	ft_exp(tab[1]);
 }

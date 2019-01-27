@@ -6,7 +6,7 @@
 /*   By: gchuinar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/23 23:44:58 by gchuinar          #+#    #+#             */
-/*   Updated: 2019/01/24 03:52:25 by gchuinar         ###   ########.fr       */
+/*   Updated: 2019/01/27 22:59:53 by gchuinar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,6 @@ char	*ft_decal_A(char *str)
 	while (str[i] == 'A')
 		i++;
 	dest = ft_strdup(&str[i]);
+	free(str);
 	return (dest);
 }

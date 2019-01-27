@@ -6,11 +6,12 @@
 /*   By: gchuinar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/21 04:57:12 by gchuinar          #+#    #+#             */
-/*   Updated: 2019/01/27 00:05:46 by gchuinar         ###   ########.fr       */
+/*   Updated: 2019/01/27 23:25:35 by gchuinar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/printf.h"
+#include <stdio.h>
 
 static char *ft_add_womal(char *nb1, char *nb2)
 {
@@ -73,6 +74,7 @@ static char *ft_add_wmal(char *nb1, char *nb2)
 
 char    *ft_do_add(char *nb1, char *nb2, char *result)
 {
+
 	if (ft_sizecmp(nb1, nb2) == 1)
 	{
 		if (nb1[0] != '9')
@@ -92,8 +94,8 @@ char    *ft_do_add(char *nb1, char *nb2, char *result)
 		if (nb1[1] == '\0' && nb2[1] == '\0')
 			result = ft_add_chiffre(nb1[0], nb2[0]);
 		else
-			result = ft_add_wmal(nb1, nb2);
+			result = ft_addsamelen(nb1, nb2);
 	}
-	printf("result = %s\n", result);
+	printf("31 et 32 result = %s\n", result);
 	return (result);
 }

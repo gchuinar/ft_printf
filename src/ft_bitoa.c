@@ -6,7 +6,7 @@
 /*   By: gchuinar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/25 00:57:21 by gchuinar          #+#    #+#             */
-/*   Updated: 2019/01/25 20:25:36 by gchuinar         ###   ########.fr       */
+/*   Updated: 2019/01/27 23:22:04 by gchuinar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <string.h>
 #include "../include/printf.h"
 #include <stdio.h>
-
+/*
 static int	ft_doublelen(double *nbr)
 {
 	int len;
@@ -47,4 +47,4 @@ char		*ft_bitoa(double *n)
 		len--;
 	}
 	return (alpha);
-}
+}*/
