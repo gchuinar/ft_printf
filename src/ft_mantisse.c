@@ -1,36 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_doop_str.c                                      :+:      :+:    :+:   */
+/*   ft_mantisse.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gchuinar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/17 01:34:53 by gchuinar          #+#    #+#             */
-/*   Updated: 2019/01/28 04:47:30 by gchuinar         ###   ########.fr       */
+/*   Created: 2019/01/28 03:02:46 by gchuinar          #+#    #+#             */
+/*   Updated: 2019/01/28 05:19:03 by gchuinar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/printf.h"
 #include <stdio.h>
-
-char	*ft_doop_str(char *nb1, char c, char *nb2)
+char	*ft_mantisse(char *mant)
 {
+	char	*nbr;
 	char	*result;
-	
-	result = NULL;
-	if (c == '*')
-		
-		result = ft_do_mult(nb1, nb2, result);
-	/*	else if (c == '/')
-			result = ft_do_div(nb1, nb2, result);*/
-	else if (c == '+')
-		result = ft_do_add(nb1, nb2, result);
-	else if (c == '-') 
-			result = ft_do_sous(nb1, nb2, result);
-	else
+	int		i;
+	int		j;
+
+	i = 0;
+	result = ft_strdup("0");
+	while (mant[i] != '\0')
 	{
-		ft_putendl("error");
-//		return (EXIT_FAILURE);
+		printf("i = %d\n", i);
+		nbr = ft_strdup("100000000000000000000000");
+		if (mant[i] == '1')
+		{
+			j = i;
+			while (j + 1 > 0)
+			{
+				nbr = ft_do_div_2(nbr, "2");
+				j--;
+			}
+			result = ft_doop_str(nbr, '+', result);
+		}
+		i++;
 	}
 	return (result);
 }

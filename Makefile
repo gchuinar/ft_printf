@@ -6,7 +6,7 @@
 #    By: gchuinar <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/14 17:24:37 by gchuinar          #+#    #+#              #
-#    Updated: 2019/01/27 20:29:11 by gchuinar         ###   ########.fr        #
+#    Updated: 2019/01/28 05:14:31 by gchuinar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,13 +20,16 @@ SRC_NAME = ft_atoi_ull.c	\
 	ft_convert_base.c	\
 	ft_strcat.c	\
 	ft_mult_is_neg.c	\
+	ft_mantisse.c	\
 	ft_fill_zero.c	\
 	ft_do_add.c	\
 	ft_add_bin.c	\
 	ft_addsame_len.c	\
+	ft_do_div_2	\
 	ft_sizecmp.c	\
 	ft_get_mem.c	\
 	ft_swap_mult.c	\
+	ft_do_sous.c	\
 	ft_convert_u.c	\
 	ft_decal.c	\
 	ft_power_dbl.c	\
