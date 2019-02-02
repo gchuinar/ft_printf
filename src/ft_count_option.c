@@ -1,41 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_mantisse.c                                      :+:      :+:    :+:   */
+/*   ft_count_option.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gchuinar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/28 03:02:46 by gchuinar          #+#    #+#             */
-/*   Updated: 2019/01/28 05:19:03 by gchuinar         ###   ########.fr       */
+/*   Created: 2019/02/01 12:04:12 by gchuinar          #+#    #+#             */
+/*   Updated: 2019/02/01 18:35:23 by gchuinar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/printf.h"
-#include <stdio.h>
-char	*ft_mantisse(char *mant)
+
+static int	ft_count_option(char *str)
 {
-	char	*nbr;
-	char	*result;
-	int		i;
-	int		j;
+	int	i;
+	int	j;
+	int	count;
 
 	i = 0;
-	result = ft_strdup("0");
-	while (mant[i] != '\0')
+	count = 0;
+	while (str[i] != '\0')
 	{
-		printf("i = %d\n", i);
-		nbr = ft_strdup("100000000000000000000000");
-		if (mant[i] == '1')
+		if (str[i] == '%')
 		{
+			count++;
 			j = i;
-			while (j + 1 > 0)
-			{
-				nbr = ft_do_div_2(nbr, "2");
-				j--;
-			}
-			result = ft_doop_str(nbr, '+', result);
+			while (str[j + 1] == '%')
+				j++;
 		}
-		i++;
+		if (j > i)
+			i = j + 1;
+		else
+			i++;
 	}
-	return (result);
+	return (count);
+}
+
+char	**ft_alloc_option(char *str)
+{
+	char	**tab;
+	int		nbr_opt;
+
+	nbr_opt = ft_count_option(str);
+	if (!(tab = (char**)malloc(sizeof(char*) * nbr_opt + 1)))
+		tab = NULL;
+	return (tab);
 }

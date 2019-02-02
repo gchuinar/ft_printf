@@ -1,27 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putlonglong.c                                   :+:      :+:    :+:   */
+/*   ft_parser.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gchuinar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/12 19:13:26 by gchuinar          #+#    #+#             */
-/*   Updated: 2019/02/01 08:32:00 by gchuinar         ###   ########.fr       */
+/*   Created: 2019/02/01 07:00:11 by gchuinar          #+#    #+#             */
+/*   Updated: 2019/02/01 08:50:31 by gchuinar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+/*
 #include "../include/printf.h"
 
-void	ft_putlonglong(long long nbr)
+int	ft_option_is_ok(char **str)
 {
-		unsigned long long nb;
-		if (nbr < 0)
-		{
-			ft_putchar('-');
-			nbr *= -1;
-		}
-		nb = nbr;
-		if (nb > 9)
-			ft_putlonglong(nb / 10);
-		ft_putchar((nb % 10) + '0');
+
+	return (1);
 }
+
+int	ft_parser(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] == '%')
+		{
+			if (str[i + 1] == '\0')
+				return (0);
+			else
+				if (ft_option_is_ok(&str[i + 1] == 0))
+					return (0);
+		}
+		i++;
+	}
+	return (1);
+}*/

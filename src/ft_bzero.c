@@ -1,43 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_mult_is_neg.c                                   :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gchuinar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/24 05:13:07 by gchuinar          #+#    #+#             */
-/*   Updated: 2019/01/25 00:35:45 by gchuinar         ###   ########.fr       */
+/*   Created: 2018/11/07 07:22:07 by gchuinar          #+#    #+#             */
+/*   Updated: 2019/02/02 10:34:31 by gchuinar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_mult_is_neg(char **nb1, char **nb2)
-{
-	int	i;
-	int	j;
+#include "../include/printf.h"
 
+void	ft_bzero(void *s, size_t n)
+{
+	unsigned char	*ptr;
+	size_t			i;
+
+	ptr = (unsigned char*)s;
 	i = 0;
-	j = 0;
-	while ((((**nb1 > 8 && **nb1 < 14) || **nb1 == ' ')))
+	while (i < n)
 	{
-		(*nb1)++;
+		ptr[i] = '\0';
+		i++;
 	}
-	while ((((**nb2 > 8 && **nb2 < 14) || **nb2 == ' ')))
-		(*nb2)++;
-	if (**nb1 == '-' && **nb2 == '-')
-	{
-		(*nb1)++;
-		(*nb2)++;
-		return (0);
-	}
-	else if (**nb1 == '-')
-	{
-		(*nb1)++;
-		return (1);
-	}
-	else if (**nb2 == '-')
-	{
-		(*nb2)++;
-		return (1);
-	}
-	return (0);
 }

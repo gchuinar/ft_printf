@@ -1,27 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap_mult.c                                     :+:      :+:    :+:   */
+/*   struct.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gchuinar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/23 23:53:07 by gchuinar          #+#    #+#             */
-/*   Updated: 2019/01/27 23:07:29 by gchuinar         ###   ########.fr       */
+/*   Created: 2019/01/27 16:59:25 by gchuinar          #+#    #+#             */
+/*   Updated: 2019/02/02 16:47:10 by gchuinar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_swap_mult(char *str)
-{
-	int i;
+#ifndef STRUCT_H
+# define STRUCT_H
 
-	i = 0;
-	while (str[i] < '0' || str[i] > '9')
-		i++;
-	while(str[i] != '\0')
+typedef struct	s_flags
+{
+	int	diese;
+	int	zero;
+	int	esp;
+	int	plus;
+	int	moins;
+	int	precis;
+	int	nbr_precis;
+	enum
 	{
-		str[i - 1] = str[i];
-		i++;
-	}
-	str[i - 1] = '0';
-	return (str);
-}
+		rien,
+		hh,
+		h,
+		ll,
+		l,
+		j,
+		z
+	} e_prefix;
+}				t_flags;
+
+#endif

@@ -6,7 +6,7 @@
 /*   By: gchuinar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/02 21:04:44 by gchuinar          #+#    #+#             */
-/*   Updated: 2019/01/28 05:15:05 by gchuinar         ###   ########.fr       */
+/*   Updated: 2019/02/02 13:15:43 by gchuinar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include <stdarg.h>
 # include <stdlib.h>
+# include "struct.h"
+# include "check.h"
 
 void	ft_display_l(const char *str, va_list param, int i, int l);
 void	ft_display_a_A(const char *str, va_list param, int i);
@@ -28,24 +30,11 @@ void	ft_putlong(long nbr);
 void	ft_uputlonglong(unsigned long long nbr);
 void	ft_uputnbr(unsigned int nbr);
 unsigned long long	ft_atoi_ull(const char *str);
-double	ft_power_dbl(unsigned long long nbr, int power);
-char	*ft_conv_b_d(char *str);
-char	*ft_doop_str(char *nb1, char c, char *nb2);
-int		ft_sizecmp(const char *str1, const char *str2);
-char	*ft_do_add(char *nb1, char *nb2, char *result);
-char	*ft_do_mult(char *nb1, char *nb2, char *result);
-void	ft_fill_zero(void *s, size_t n);
-void	ft_fill_A(void *s, size_t n);
-char	*ft_decal_0(char *str);
-char	*ft_decal_A(char *str);
-char	*ft_swap_mult(char *str);
-int		ft_mult_is_neg(char **nb1, char **nb2);
-void	ft_add_bin(char *nbr);
-char	*ft_bitoa(double *n);
-char	*ft_addsamelen(char *nb1, char *nb2);
-char	*ft_do_sous(char *nb1, char *nb2, char *result);
-char	*ft_do_div_2(char *divid, char *divis);
-char	*ft_mantisse(char *mant);
+void	ft_putfloat(double nbr, int i);
+int		ft_prefix(char **str);
+char	**ft_alloc_option(char *str);
+void	ft_putnstr(const char *str, int i);
+char	*ft_check_flags(char **format, t_flags *opt);
 
 size_t	ft_strlen(const char *str);
 char	*ft_strchr(const char *str, int c);
@@ -56,6 +45,8 @@ void    *ft_memset(void *s, int c, size_t n);
 char	*ft_strcat(char *dest, const char *src);
 char	*ft_strdup(const char *str);
 char	*ft_strndup(const char *str, size_t len);
+void	ft_bzero(void *s, size_t n);
+int		ft_isdigit(int c);
 
 void	ft_putchar(char c);
 void	ft_putstr(char *str);

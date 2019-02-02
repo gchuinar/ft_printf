@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putlonglong.c                                   :+:      :+:    :+:   */
+/*   struct.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gchuinar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/12 19:13:26 by gchuinar          #+#    #+#             */
-/*   Updated: 2019/02/01 08:32:00 by gchuinar         ###   ########.fr       */
+/*   Created: 2019/02/01 16:59:25 by gchuinar          #+#    #+#             */
+/*   Updated: 2019/02/02 08:10:17 by gchuinar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/printf.h"
+#include "printf.h"
 
-void	ft_putlonglong(long long nbr)
+typedef		s_struct
 {
-		unsigned long long nb;
-		if (nbr < 0)
-		{
-			ft_putchar('-');
-			nbr *= -1;
-		}
-		nb = nbr;
-		if (nb > 9)
-			ft_putlonglong(nb / 10);
-		ft_putchar((nb % 10) + '0');
-}
+	enum	e_prefix
+	{
+		rien,
+		hh,
+		h,
+		ll,
+		l,
+		j,
+		z
+	};
+}			t_struct

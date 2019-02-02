@@ -1,27 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putlonglong.c                                   :+:      :+:    :+:   */
+/*   ft_display_int.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gchuinar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/12 19:13:26 by gchuinar          #+#    #+#             */
-/*   Updated: 2019/02/01 08:32:00 by gchuinar         ###   ########.fr       */
+/*   Created: 2019/02/02 16:27:17 by gchuinar          #+#    #+#             */
+/*   Updated: 2019/02/02 16:46:43 by gchuinar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/printf.h"
-
-void	ft_putlonglong(long long nbr)
+int	ft_display_int(char **format, va_list *args, t_flags *opt)
 {
-		unsigned long long nb;
-		if (nbr < 0)
-		{
-			ft_putchar('-');
-			nbr *= -1;
-		}
-		nb = nbr;
-		if (nb > 9)
-			ft_putlonglong(nb / 10);
-		ft_putchar((nb % 10) + '0');
+	
+	return ();
 }

@@ -1,27 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putlonglong.c                                   :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gchuinar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/12 19:13:26 by gchuinar          #+#    #+#             */
-/*   Updated: 2019/02/01 08:32:00 by gchuinar         ###   ########.fr       */
+/*   Created: 2018/11/07 10:54:04 by gchuinar          #+#    #+#             */
+/*   Updated: 2019/02/02 12:58:04 by gchuinar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/printf.h"
-
-void	ft_putlonglong(long long nbr)
+int	ft_isdigit(int c)
 {
-		unsigned long long nb;
-		if (nbr < 0)
-		{
-			ft_putchar('-');
-			nbr *= -1;
-		}
-		nb = nbr;
-		if (nb > 9)
-			ft_putlonglong(nb / 10);
-		ft_putchar((nb % 10) + '0');
+	if (c >= 48 && c <= 57)
+		return (1);
+	return (0);
 }
